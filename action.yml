@@ -41,8 +41,7 @@ runs:
         arch_name=$(uname -m)
         if [ "$arch_name" = "arm64" ]
         then
-            echo "Detected M-series processor runner without nested virtualization support, exiting."
-            exit 1
+            echo "Detected arm64 system. May not be compatible."
         else
             echo "Running on supported architecture: ${arch_name}"
         fi
